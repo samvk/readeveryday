@@ -1,0 +1,27 @@
+// ==========================================================================
+// CUSTOM MIXINS and FUNCTIONS (specific to a project without much reusability)
+// ==========================================================================//
+
+//Star centered on <hr> elements
+
+@mixin star($color, $background) {
+	position: relative;
+
+	@include pseudo("before") {
+		//font awesome rules
+        display: inline-block;
+        font: normal normal normal 14px/1 FontAwesome;
+        font-size: inherit;
+        text-rendering: auto;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        
+		content: "\f005";
+		left: 50%;
+		transform: translate(-50%, -50%);
+		padding: .15em .20em;
+		border-radius: 5px;
+		color: $color;
+		background-color: $background;
+	}
+}

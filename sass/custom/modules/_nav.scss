@@ -1,0 +1,117 @@
+// ==========================================================================
+// NAVBAR
+// ==========================================================================//
+
+nav {
+    font-size: 1rem;
+    font-family: $font-family--primary;
+    font-weight: $font-weight--bold;
+    
+    width: 100%; //so floats still take up full width
+    
+	line-height: 4.5em;
+    
+    @include transition(padding 200ms linear);
+    padding-top: .5em;
+    padding-bottom: .5em;
+
+	@include media($xs){
+        line-height: 3.5em;
+        
+		padding-top: 0 !important;
+		padding-bottom: 0 !important;
+	}
+}
+
+.nav--hamburger {
+	@include absolute(top 4px right 10px);
+    
+    .fa-bars {
+        cursor: pointer;
+        @include hover(NULL, $navyblue);
+        @extend .rounded;
+        padding: 2px 9px;
+        border: 2px solid $navyblue;
+    }
+}
+
+.nav--logo {
+	display: block;
+	float: left;
+
+    @include transition(font-size 200ms linear);
+	font-size: 1.7em;
+    
+    @include media($xs){
+        font-size: 1.7em !important;
+    }
+}
+
+.nav--list {
+	float: right;
+	display: none;
+    
+	li {
+		display: inline-block;
+		margin-bottom: 0;
+		
+		@include media($xs){
+			display: block;
+		}
+		
+		a {
+			padding-left: 1.2em;
+			padding-right: 1.2em;
+            height: 58px;
+            line-height: 58px;
+			
+			
+			@include media($xs){
+				font-size: 1.2em;
+				display: block;
+
+				height: 42px;
+				line-height: 42px;
+			}
+		}
+	}
+	
+	//prevent slideToggle() from hiding nav--list on bigger screens
+	@include media($sm-min, "min") {
+		display: block !important;
+	}
+
+	@include media($xs){
+        border-top: 1px solid $navyblue;
+        border-bottom: 1px solid $navyblue;
+        padding-bottom: .4em;
+	}
+	
+}
+
+.nav--logo, .nav--list {
+	@include media($xs){
+		float: none;
+	}
+}
+
+nav a {
+	@include hover($green) {
+		text-decoration: none;
+	}
+}
+
+//Nav States
+
+nav .highlighted {
+    background-color: $navyblue;
+}
+
+nav.is-small {
+    padding-top: 0;
+    padding-bottom: 0;
+    
+    .nav--logo {
+        font-size: 1.3em;
+    }
+}

@@ -1,0 +1,69 @@
+// ==========================================================================
+// SECTIONS and ARTICLES
+// ==========================================================================//
+
+
+nav {
+    @include palette($white, $darkblue, $white);
+}
+
+header {
+    color: $white;
+    background: $oceanblue url("../img/BeachBackground.png") center;
+    
+    hr {
+		@include star($white, $green);
+	}
+}
+
+#rules {
+    @include palette($darkblue, $white);
+    
+	section hr {
+		@include star($darkblue, $white);
+	}
+}
+
+#summer-slide {
+    @include palette($white, $gold, $darkred, $red);
+}
+
+#read-anywhere {
+    @include palette($white, $lightblue, $navyblue);
+}
+
+#prizes {
+    @include palette($white, $red, $gold);
+    
+	hr {
+		@include star($darkblue, $red);
+	}	
+}
+
+#recommendations {
+    @include palette($white, $greyblue, $gold);
+	
+	hr {
+		@include star($darkblue, $greyblue);
+	}
+}
+
+#contact {
+    @include palette($darkblue, $white);
+	
+	hr {
+		@include star($darkblue, $white);
+	}
+}
+
+#footer--top {
+    @include palette($white, $darkblue);
+	
+	h2 {
+		line-height: 1;
+	}
+}
+
+#footer--bottom {
+    @include palette($white, $navyblue);
+}

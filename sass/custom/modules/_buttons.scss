@@ -1,0 +1,29 @@
+// ==========================================================================
+// BUTTON RULES
+// ==========================================================================//
+
+
+.button--container {
+	text-align: center;
+}
+
+.button {
+    font-size: 1.6rem;
+	@extend .rounded;
+	border: 2px solid white;
+	background-color: inherit;
+	width: 250px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	
+	@include hover(NULL, $white);
+}
+
+button[type="submit"] {
+    width: auto;
+    border-color: $green;
+    color: $green;
+    background-color: $white;
+    
+    @include hover($white, $green);
+}

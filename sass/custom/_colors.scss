@@ -1,0 +1,45 @@
+// ==========================================================================
+// COLORS
+// ==========================================================================//
+
+//Custom colors
+
+$lightblue: #3E7692;
+$greyblue: #4D6170;
+$darkblue: #2C3E50;
+$navyblue: #233140;
+$oceanblue: #16BDD1;
+$green: #18BC9C;
+$gold: #FFA319;
+$red: #D72A0F;
+$darkred: #8F1C0A;
+
+// Color Usage
+
+$color-primary: $darkblue;
+$color-secondary: $green;
+
+
+// Common Colors
+
+$white: #fff;
+$black: #0b0b0b;
+$grey: #797e83;
+
+// Color Modifiers 
+
+$colors: (
+	grey: (
+		xx-light: lighten($grey, 43%),
+		x-light: lighten($grey, 35%),
+		light: lighten($grey, 12%),
+		base: $grey,
+		dark: darken($grey, 8%),
+		x-dark: darken($grey, 16%)
+	),
+	black: (
+		light: lighten($black, 10%),
+		base: $black,
+		dark: darken($black, 10%)
+	)
+);

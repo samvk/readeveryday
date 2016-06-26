@@ -1,0 +1,24 @@
+// ==========================================================================
+// HEADER
+// ==========================================================================//
+
+header {
+    font-size: 2.2rem;
+    @include hr($white, 5px, 250px);
+    
+	padding-top: em(90px); //extra to make room for navbar
+	padding-bottom: em(60px);
+
+    @include media($xs){
+        padding-top: 3.6em;
+    }
+	
+	h1 {
+		font-family: $font-family--secondary;
+		font-weight: $font-weight--ultra-bold;
+	}
+
+    p {
+        font-size: .8em;
+    }
+}

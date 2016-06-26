@@ -1,0 +1,72 @@
+// ==========================================================================
+// BASE RULES
+// ==========================================================================//
+
+//SECTION and ARTICLE rules
+
+section:not(.has-child-sections) {
+	font-size: 1.9rem;
+
+    @include media($xs) {
+        font-size: 1.6rem;
+    }
+    
+    //spacing
+    padding-top: em(50px);
+    padding-bottom: em(50px);
+	
+    @include hr($darkblue, 5px, 250px);		
+	
+	ul {
+		margin-left: 1em;
+	}
+	
+	li {
+		@include pseudo("before") {
+			border-color: transparent #111;
+			border-style: solid;
+			border-width: 0.35em 0 0.35em 0.45em;
+			left: -1em;
+			top: 1em;
+			position: relative;
+		}
+	}
+    
+    .highlighted {
+        background-color: $navyblue;
+    }
+}
+
+article {
+	font-size: 1.3rem;
+
+    @include hr(white, 1px, 100%);
+	
+	p {
+		letter-spacing: -0.3px;
+	}
+	
+	li {
+		font-size: 0.7em;
+		margin-left: 15px;
+	}
+	
+	//spacing
+	padding-top: em(70px);
+	padding-bottom: em(70px);
+}
+
+//HEADERS
+
+h1, h2 {
+	@extend .text-center;
+	@extend .uppercase;
+	font-weight: $font-weight--bold;
+}
+
+//LINKS
+a {
+	@include hover {
+		text-decoration: underline;
+	}
+}

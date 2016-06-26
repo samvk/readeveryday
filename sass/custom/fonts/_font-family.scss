@@ -1,0 +1,21 @@
+// ==========================================================================
+// FONT-FAMILY
+// ==========================================================================//
+
+body {
+	font-family: $font-family--secondary;
+}
+
+h1 { font-family: $font-family--primary; }
+h2 { font-family: $font-family--primary; }
+h3 { font-family: $font-family--primary; }
+h4 { font-family: $font-family--primary; }
+h5 { font-family: $font-family--primary; }
+h6 { font-family: $font-family--primary; }
+
+p,
+blockquote,
+li,
+button {
+	font-family: $font-family--secondary;
+}

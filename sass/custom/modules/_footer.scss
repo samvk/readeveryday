@@ -1,0 +1,41 @@
+// ==========================================================================
+// FOOTER RULES
+// ==========================================================================//
+
+footer {
+    font-size: 1.1rem;
+    font-family: $font-family--secondary;
+
+    @extend .text-center;
+
+    h2 {
+        margin-bottom: 1em;
+    }
+
+    //spacing
+    #footer--top { 
+        padding-top: em(40px);
+        [class*='col-'] {
+            padding-bottom: em(40px);
+        }
+    }
+
+    #footer--bottom { 
+        padding-top: em(17px);
+        padding-bottom: em(17px);
+    }
+}
+
+.crec-links {
+    a {
+        margin-left: 4px;
+        margin-right: 4px;
+        @extend .circle;
+        padding: em(4px);
+        border: 2px solid $white;
+        
+        color: white;
+        
+        @include hover($green, $white);
+    }
+}

@@ -1,0 +1,162 @@
+// ==========================================================================
+// MIXINS and PLACEHOLDERS
+// ==========================================================================//
+
+// ==========================================================================
+// INCLUDES:
+// 
+// Mixins:
+// * media{} queries
+// * hover{} state
+// * active{} state
+// * margin() shorthand
+// * padding() shorthand
+// * absolute() shorthand
+// * fixed() shorthand
+// * hr(color, height, width) shorthand
+// * pseudo(pos){} element maker
+// * arrow(direction, color, size)
+// * underline(color, size)
+// * palette(color, background-color, link-color, theme-color)
+// 
+// Placeholders:
+// * %clearfix on parent element of floats
+// 
+// ==========================================================================//
+
+@mixin media($breakpoint, $query: "max") {
+	$query: $query + "-width";
+	@media screen and (#{$query}: #{$breakpoint}) { @content; }
+}
+
+//HOVER and ACTIVE(allow common color arguments or content)
+//includes :active until overwritten
+@mixin hover($color: NULL, $background: NULL) {
+
+    @if $color != NULL OR $background != NULL {
+        @extend %hover-color-transition;
+    }
+
+	&:hover,
+	&:active {
+		color: $color;
+		background-color: $background;
+		@content;
+	}
+}
+
+@mixin active($color: NULL, $background: NULL) {
+	&:active {
+		color: $color;
+		background-color: $background;
+		@content;
+	}
+}
+
+//Margin shorthand allowing NULL values(all values required)
+@mixin margin($top, $right, $bottom, $left){
+	margin-top: $top;
+	margin-right: $right;
+	margin-bottom: $bottom;
+	margin-left: $left;
+}
+
+@mixin padding($top, $right, $bottom, $left){
+	padding-top: $top;
+	padding-right: $right;
+	padding-bottom: $bottom;
+	padding-left: $left;
+}
+
+//written as absolute(top 10px right 5px)
+@mixin absolute($args) {
+	@include position(absolute, $args);
+}
+
+//written as fixed(top 10px right 5px)
+@mixin fixed($args) {
+	@include position(fixed, $args);
+}
+
+@mixin hr($color, $height: NULL, $width: NULL) {
+    hr {
+        background-color: $color;
+        height: $height;
+        width: $width;
+    }
+}
+
+@mixin pseudo($position: "before"){
+    @if $position == "before" OR $position == "after" {
+        &:#{$position} {
+            position: absolute;
+            display: block;
+            content: "";
+
+            @content;
+        }
+    } @else {
+        @error '"#{position}" is not a valid pseudo-element.';
+    }
+}
+
+@mixin arrow($direction, $color, $height: 6px, $width: 2*$height, $position: null){
+    
+    @if ($direction == "up") {
+        $position: "before" !default;
+    } @else {
+        $position: "after" !default;
+    }
+    
+    @include pseudo($position) {
+        height: 0;
+        width: 0;
+        @if ($direction == "up"){
+            border-bottom: $height solid $color;
+            border-left: 0.5*$width solid transparent;
+            border-right: 0.5*$width solid transparent;
+        }
+        @else if ($direction == "down"){
+            border-top: $height solid $color;
+            border-left: 0.5*$width solid transparent;
+            border-right: 0.5*$width solid transparent;
+        }
+        @else if ($direction == "left"){
+            border-top: $height solid transparent;
+            border-bottom: 0.5*$width solid transparent;
+            border-right: 0.5*$width solid $color;
+        }
+        @else if ($direction == "right"){
+            border-top: $height solid transparent;
+            border-bottom: 0.5*$width solid transparent;
+            border-left: 0.5*$width solid $color;
+        }
+        
+        @content;
+    }
+}
+
+@mixin underline($color: $color-primary, $size: 6px, $type: solid) {
+	border-bottom: $size $type $color;
+}
+
+@mixin palette($color: NULL, $background: NULL, $link-color: NULL, $theme-color: NULL) {
+    color: $color;
+    background-color: $background;
+    
+    a {
+        color: $link-color;
+    }
+    
+    .loud {
+        color: $theme-color;
+    }
+}
+
+%clearfix {
+    &:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}

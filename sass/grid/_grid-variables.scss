@@ -1,0 +1,14 @@
+// ==========================================================================
+// Grid variables
+// ==========================================================================//
+
+// Number of columns in the grid.
+$grid-columns: 12;
+// Padding between columns. Gets divided in half for the left and right.
+$grid-gutter-width: 30px;
+
+//Container sizes (define the  width of `.container` for different screen sizes.)
+
+$container-sm: (720px + $grid-gutter-width);
+$container-md: (940px + $grid-gutter-width);
+$container-lg: (1140px + $grid-gutter-width);

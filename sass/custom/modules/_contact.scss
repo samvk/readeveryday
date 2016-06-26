@@ -1,0 +1,72 @@
+// ==========================================================================
+// CONTACT
+// ==========================================================================//
+
+
+input, textarea {
+	width: 100%;
+	height: 3em;
+	font-size: 0.7em;
+	border-top: 1px solid color(grey, x-light);
+}
+
+textarea {
+	height: 9em;
+	resize: none;
+	border-bottom: 1px solid color(grey, x-light);
+	
+	//move placeholder text down 
+	padding-top: em(14px);
+}
+
+.form-button--wrapper {
+    height: 3em;
+}
+
+
+//Form states
+
+.form--disabled {
+    background: $white;
+    @include input-placeholder {
+        text-decoration: line-through;
+    }
+}
+
+//Form responses
+
+%message {
+    padding-top: .7em;
+}
+
+form .success {
+    @extend %message;
+    color: $green;
+}
+
+form .error {
+    @extend %message;
+    color: $red;
+}
+
+//Form Placeholder
+
+.input--placeholder {
+    @extend .absolute;
+    @extend .bold;
+    z-index: $z-pseudo;
+    content: "Name";
+    font-size: em(8px);
+    color: $navyblue;
+    
+    @include transition(opacity 500ms, transform 500ms);
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(100%);
+}
+
+.input--placeholder.focused {
+    visibility: visible;
+    opacity: 1.0;
+    transform: translateY(0%);
+}

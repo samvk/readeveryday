@@ -1,0 +1,26 @@
+// ==========================================================================
+// FONT VARIABLES
+// ==========================================================================//
+
+//Import Google Fonts
+
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+@import url(https://fonts.googleapis.com/css?family=Lato:400,700,900);
+
+//Import Fonts (@include font-face(Name, URL);)
+
+//Fonts
+$font-family--primary: "Montserrat", Arial, Helvetica, sans-serif;
+$font-family--secondary: "Lato", Arial, Helvetica, sans-serif;
+
+// Font Weights
+
+$font-weight--thin: 100;
+$font-weight--light: 300;
+$font-weight--medium: 400;
+$font-weight--bold: 700;
+$font-weight--ultra-bold: 900;
+
+//Font Sizes
+
+$font-size--base: 16px;
