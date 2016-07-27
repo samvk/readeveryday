@@ -2,28 +2,34 @@
 // BUTTON RULES
 // ==========================================================================//
 
-
-.button--container {
-	text-align: center;
-}
-
 .button {
+    //base font-size
     font-size: 1.6rem;
+    
+    //design
 	@extend .rounded;
 	border: 2px solid white;
 	background-color: inherit;
+    @include hover(NULL, $white);
+    
+    //layout
 	width: 250px;
 	margin-top: 5px;
 	margin-bottom: 5px;
-	
-	@include hover(NULL, $white);
+}
+
+.button--container {
+    //layout
+    text-align: center;
 }
 
 button[type="submit"] {
-    width: auto;
-    border-color: $green;
+    //design
     color: $green;
     background-color: $white;
-    
+    border-color: $green;
     @include hover($white, $green);
+
+    //layout
+    width: auto;
 }

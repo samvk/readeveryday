@@ -3,63 +3,82 @@
 // ==========================================================================//
 
 nav {
+    //base font-size
     font-size: 1rem;
+    
+    //text
     font-family: $font-family--primary;
     font-weight: $font-weight--bold;
+    line-height: 4.5em;
     
+    //layout
     width: 100%; //so floats still take up full width
-    
-	line-height: 4.5em;
-    
-    @include transition(padding 200ms linear);
     padding-top: .5em;
     padding-bottom: .5em;
 
+    //transitions
+    @include transition(padding 200ms linear);
+
 	@include media($xs){
+        //text
         line-height: 3.5em;
         
+        //layout
 		padding-top: 0 !important;
 		padding-bottom: 0 !important;
 	}
 }
 
 .nav--hamburger {
+    //layout
 	@include absolute(top 4px right 10px);
     
     .fa-bars {
-        cursor: pointer;
+        //design
         @include hover(NULL, $navyblue);
         @extend .rounded;
-        padding: 2px 9px;
+        cursor: pointer;
         border: 2px solid $navyblue;
+
+        //layout
+        padding: 2px 9px;
     }
 }
 
 .nav--logo {
+    //text
+    font-size: 1.7em;
+
+    //layout
 	display: block;
 	float: left;
 
+    //transitions
     @include transition(font-size 200ms linear);
-	font-size: 1.7em;
     
     @include media($xs){
+        //text
         font-size: 1.7em !important;
     }
 }
 
 .nav--list {
+    //layout
+    display: none;
 	float: right;
-	display: none;
     
 	li {
+        //layout
 		display: inline-block;
 		margin-bottom: 0;
 		
 		@include media($xs){
+            //layout
 			display: block;
 		}
 		
 		a {
+            //layout
 			padding-left: 1.2em;
 			padding-right: 1.2em;
             height: 58px;
@@ -67,9 +86,13 @@ nav {
 			
 			
 			@include media($xs){
+                //text
 				font-size: 1.2em;
+                
+                //design
 				display: block;
 
+                //layout
 				height: 42px;
 				line-height: 42px;
 			}
@@ -78,12 +101,16 @@ nav {
 	
 	//prevent slideToggle() from hiding nav--list on bigger screens
 	@include media($sm-min, "min") {
+        //layout
 		display: block !important;
 	}
 
 	@include media($xs){
+        //design
         border-top: 1px solid $navyblue;
         border-bottom: 1px solid $navyblue;
+        
+        //layout
         padding-bottom: .4em;
 	}
 	
@@ -91,11 +118,13 @@ nav {
 
 .nav--logo, .nav--list {
 	@include media($xs){
+        //layout
 		float: none;
 	}
 }
 
 nav a {
+    //design
 	@include hover($green) {
 		text-decoration: none;
 	}
@@ -104,14 +133,17 @@ nav a {
 //Nav States
 
 nav .highlighted {
+    //design
     background-color: $navyblue;
 }
 
 nav.is-small {
+    //layout
     padding-top: 0;
     padding-bottom: 0;
     
     .nav--logo {
+        //text
         font-size: 1.3em;
     }
 }

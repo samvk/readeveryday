@@ -6,17 +6,23 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-    <meta name="description" content="Encouraging students to read as often as they can over summer vacation.">
 	<meta name="author" content="Sam Kauffman">
+    <meta name="description" content="Encouraging students to read as often as they can over summer vacation.">
+    <meta name="theme-color" content="#2C3E50">
 
 	<title>Read Every Day!</title>
-	<link rel="icon" href="img/icon/favicon.ico" type="image/x-icon">
-	
+
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="manifest.json">
+    <link rel="mask-icon" href="safari-pinned-tab.svg" color="#016C64">
+
     <!-- Custom Fonts -->
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
     
 	<!-- Custom CSS -->
-	<link href="css/style.css" rel="stylesheet">
+	<link href="css/style.min.css" rel="stylesheet">
 
 </head>
 
@@ -118,7 +124,7 @@
 				For each book you read (or for every five articles), you can fill out a “Raffle Review” ticket. Bring those tickets on the first day of school and you can enter a gift card raffle at the start of the school year!
 			</p>
 			<div class="button--container">
-				<a href="http://www.crecschools.org/files/file/MLC/Summer%20Reading%202015/SummerReadingRaffleReviewTickets2015.pdf" class="button"><span class="fa fa-ticket"></span> Raffle tickets</a>
+				<a href="docs/SummerReadingRaffleReviewTickets.pdf" class="button"><span class="fa fa-ticket"></span> Raffle tickets</a>
 			</div>
 		</div>
 	</section>
@@ -135,12 +141,12 @@
 			</p>
 			<div class="button--container">
 				<div class="inline-block">
-                    <a href="http://www.crecschools.org/files/file/MLC/Summer%20Reading%202015/2015_ctread_grade5_6.pdf" class="button"><span class="fa fa-book"></span> Grades 5-6</a>
-                    <a href="http://www.crecschools.org/files/file/MLC/Summer%20Reading%202015/2015_ctread_grade7_8.pdf" class="button"><span class="fa fa-book"></span> Grades 7-8</a>
+                    <a href="docs/ctread_grade5-6.pdf" class="button"><span class="fa fa-book"></span> Grades 5-6</a>
+                    <a href="docs/ctread_grade7-8.pdf" class="button"><span class="fa fa-book"></span> Grades 7-8</a>
 				</div>
 				<div class="inline-block">
-                    <a href="http://www.crecschools.org/files/file/MLC/Summer%20Reading%202015/2015_ctread_grade9_12.pdf" class="button"><span class="fa fa-book"></span> Grades 9-12</a>
-                    <a href="http://www.crecschools.org/files/file/MLC/Summer%20Reading%202015/MLCSummerReading2015additonalbooklists_1.pdf" class="button"><span class="fa fa-book"></span> Even More</a>
+                    <a href="docs/ctread_grade9-12.pdf" class="button"><span class="fa fa-book"></span> Grades 9-12</a>
+                    <a href="docs/CTSummerReadingadditonalbooklists.pdf" class="button"><span class="fa fa-book"></span> Even More</a>
 				</div>
 			</div>
 			<p>
@@ -154,7 +160,7 @@
             <div class="col-lg-10 center">
                 <h2>Contact Us</h2>
                 <hr>
-                <form id="contact-form" action="php/mail.php" method="post">
+                <form id="contact-form" action="php/contact.php" method="post">
                     <label>
                         <span class="input--placeholder">Name</span>
                         <input type="text" name="name" placeholder="Name" maxlength="100" required>
@@ -225,12 +231,12 @@
 
 	<!-- jQuery -->
     <script src="//ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-    <script>window.jQuery || document.write("<script src='js/jquery.min.js'><\/script>")</script>
+    <script>window.jQuery || document.write("<script src='/js/jquery.min.js'><\/script>")</script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
 
 	<!-- Javascript -->
-	<script src="js/mail.js"></script>
-	<script src="js/script.js"></script>
+	<script src="/js/contact.min.js"></script>
+	<script src="/js/script.min.js"></script>
 
 </body>
 

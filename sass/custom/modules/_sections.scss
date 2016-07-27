@@ -4,10 +4,12 @@
 
 
 nav {
+    //design
     @include palette($white, $darkblue, $white);
 }
 
 header {
+    //design
     color: $white;
     background: $oceanblue url("../img/BeachBackground.png") center;
     
@@ -17,6 +19,7 @@ header {
 }
 
 #rules {
+    //design
     @include palette($darkblue, $white);
     
 	section hr {
@@ -25,14 +28,17 @@ header {
 }
 
 #summer-slide {
+    //design
     @include palette($white, $gold, $darkred, $red);
 }
 
 #read-anywhere {
+    //design
     @include palette($white, $lightblue, $navyblue);
 }
 
 #prizes {
+    //design
     @include palette($white, $red, $gold);
     
 	hr {
@@ -41,6 +47,7 @@ header {
 }
 
 #recommendations {
+    //design
     @include palette($white, $greyblue, $gold);
 	
 	hr {
@@ -49,6 +56,7 @@ header {
 }
 
 #contact {
+    //design
     @include palette($darkblue, $white);
 	
 	hr {
@@ -57,13 +65,16 @@ header {
 }
 
 #footer--top {
+    //design
     @include palette($white, $darkblue);
 	
 	h2 {
+        //text
 		line-height: 1;
 	}
 }
 
 #footer--bottom {
+    //design
     @include palette($white, $navyblue);
 }

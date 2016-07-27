@@ -1133,14 +1133,14 @@ nav {
   font-size: 1rem;
   font-family: "Montserrat", Arial, Helvetica, sans-serif;
   font-weight: 700;
-  width: 100%;
   line-height: 4.5em;
+  width: 100%;
+  padding-top: .5em;
+  padding-bottom: .5em;
   -moz-transition: padding 200ms linear;
   -o-transition: padding 200ms linear;
   -webkit-transition: padding 200ms linear;
   transition: padding 200ms linear;
-  padding-top: .5em;
-  padding-bottom: .5em;
 }
 @media screen and (max-width: 767px) {
   nav {
@@ -1157,8 +1157,8 @@ nav {
 }
 .nav--hamburger .fa-bars {
   cursor: pointer;
-  padding: 2px 9px;
   border: 2px solid #233140;
+  padding: 2px 9px;
 }
 .nav--hamburger .fa-bars:hover, .nav--hamburger .fa-bars:active {
   color: NULL;
@@ -1166,13 +1166,13 @@ nav {
 }
 
 .nav--logo {
+  font-size: 1.7em;
   display: block;
   float: left;
   -moz-transition: font-size 200ms linear;
   -o-transition: font-size 200ms linear;
   -webkit-transition: font-size 200ms linear;
   transition: font-size 200ms linear;
-  font-size: 1.7em;
 }
 @media screen and (max-width: 767px) {
   .nav--logo {
@@ -1181,8 +1181,8 @@ nav {
 }
 
 .nav--list {
-  float: right;
   display: none;
+  float: right;
 }
 .nav--list li {
   display: inline-block;
@@ -1479,10 +1479,6 @@ header hr:before {
   color: NULL;
 }
 
-.button--container {
-  text-align: center;
-}
-
 .button, button {
   font-size: 1.6rem;
   border: 2px solid white;
@@ -1496,11 +1492,15 @@ header hr:before {
   background-color: #fff;
 }
 
+.button--container {
+  text-align: center;
+}
+
 button[type="submit"] {
-  width: auto;
-  border-color: #18BC9C;
   color: #18BC9C;
   background-color: #fff;
+  border-color: #18BC9C;
+  width: auto;
 }
 button[type="submit"]:hover, button[type="submit"]:active {
   color: #fff;
@@ -1508,16 +1508,16 @@ button[type="submit"]:hover, button[type="submit"]:active {
 }
 
 input, textarea {
-  width: 100%;
-  height: 3em;
   font-size: 0.7em;
   border-top: 1px solid #d6d7d9;
+  width: 100%;
+  height: 3em;
 }
 
 textarea {
-  height: 9em;
   resize: none;
   border-bottom: 1px solid #d6d7d9;
+  height: 9em;
   padding-top: 0.875em;
 }
 
@@ -1554,17 +1554,16 @@ form .error {
 }
 
 .input--placeholder {
-  z-index: 2000;
-  content: "Name";
   font-size: 0.5em;
+  z-index: 2000;
   color: #233140;
+  visibility: hidden;
+  opacity: 0;
+  transform: translateY(100%);
   -moz-transition: opacity 500ms, -moz-transform 500ms;
   -o-transition: opacity 500ms, -o-transform 500ms;
   -webkit-transition: opacity 500ms, -webkit-transform 500ms;
   transition: opacity 500ms, transform 500ms;
-  visibility: hidden;
-  opacity: 0;
-  transform: translateY(100%);
 }
 
 .input--placeholder.focused {
@@ -1592,11 +1591,11 @@ footer #footer--bottom {
 }
 
 .crec-links a {
+  color: white;
+  border: 2px solid #fff;
+  padding: 0.25em;
   margin-left: 4px;
   margin-right: 4px;
-  padding: 0.25em;
-  border: 2px solid #fff;
-  color: white;
 }
 .crec-links a:hover, .crec-links a:active {
   color: #18BC9C;

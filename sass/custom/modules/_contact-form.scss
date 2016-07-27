@@ -1,32 +1,39 @@
 // ==========================================================================
-// CONTACT
+// CONTACT FORM
 // ==========================================================================//
 
 
 input, textarea {
+    //text
+    font-size: 0.7em;
+
+    //design
+    border-top: 1px solid color(grey, x-light);
+
+    //layout
 	width: 100%;
 	height: 3em;
-	font-size: 0.7em;
-	border-top: 1px solid color(grey, x-light);
 }
 
 textarea {
+    //design
+    resize: none;
+    border-bottom: 1px solid color(grey, x-light);
+    
+    //layout
 	height: 9em;
-	resize: none;
-	border-bottom: 1px solid color(grey, x-light);
-	
-	//move placeholder text down 
-	padding-top: em(14px);
+    padding-top: em(14px); //move placeholder text down 
 }
 
 .form-button--wrapper {
+    //layout
     height: 3em;
 }
-
 
 //Form states
 
 .form--disabled {
+    //design
     background: $white;
     @include input-placeholder {
         text-decoration: line-through;
@@ -36,37 +43,50 @@ textarea {
 //Form responses
 
 %message {
+    //layout
     padding-top: .7em;
 }
 
 form .success {
     @extend %message;
+    
+    //design
     color: $green;
 }
 
 form .error {
     @extend %message;
+    
+    //design
     color: $red;
 }
 
 //Form Placeholder
 
 .input--placeholder {
-    @extend .absolute;
-    @extend .bold;
-    z-index: $z-pseudo;
-    content: "Name";
+    //text
     font-size: em(8px);
+    @extend .bold;
+
+    //design
+    z-index: $z-pseudo;
     color: $navyblue;
-    
-    @include transition(opacity 500ms, transform 500ms);
     visibility: hidden;
     opacity: 0;
+    
+    //layout
+    @extend .absolute;
     transform: translateY(100%);
+
+    //transitions
+    @include transition(opacity 500ms, transform 500ms);
 }
 
 .input--placeholder.focused {
+    //design
     visibility: visible;
     opacity: 1.0;
+    
+    //layout
     transform: translateY(0%);
 }
