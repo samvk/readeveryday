@@ -35,7 +35,7 @@ nav {
     
     .fa-bars {
         //design
-        @include hover(NULL, $navyblue);
+        @include hover(null, $navyblue);
         @extend .rounded;
         cursor: pointer;
         border: 2px solid $navyblue;

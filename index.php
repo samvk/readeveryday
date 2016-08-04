@@ -231,12 +231,12 @@
 
 	<!-- jQuery -->
     <script src="//ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-    <script>window.jQuery || document.write("<script src='/js/jquery.min.js'><\/script>")</script>
+    <script>window.jQuery || document.write("<script src='js/jquery.min.js'><\/script>")</script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
 
 	<!-- Javascript -->
-	<script src="/js/contact.min.js"></script>
-	<script src="/js/script.min.js"></script>
+	<script src="js/contact.min.js"></script>
+	<script src="js/script.min.js"></script>
 
 </body>
 

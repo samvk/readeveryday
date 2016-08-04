@@ -10,7 +10,7 @@
 	@extend .rounded;
 	border: 2px solid white;
 	background-color: inherit;
-    @include hover(NULL, $white);
+    @include hover(null, $white);
     
     //layout
 	width: 250px;

@@ -1124,8 +1124,6 @@ h1, h2 {
 }
 
 a:hover, a:active {
-  color: NULL;
-  background-color: NULL;
   text-decoration: underline;
 }
 
@@ -1161,7 +1159,6 @@ nav {
   padding: 2px 9px;
 }
 .nav--hamburger .fa-bars:hover, .nav--hamburger .fa-bars:active {
-  color: NULL;
   background-color: #233140;
 }
 
@@ -1228,7 +1225,6 @@ nav {
 
 nav a:hover, nav a:active {
   color: #18BC9C;
-  background-color: NULL;
   text-decoration: none;
 }
 
@@ -1274,9 +1270,6 @@ nav {
 nav a {
   color: #fff;
 }
-nav .loud {
-  color: NULL;
-}
 
 header {
   color: #fff;
@@ -1290,8 +1283,12 @@ header hr:before {
   display: block;
   content: "";
   display: inline-block;
-  font: normal normal normal 14px/1 FontAwesome;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
   font-size: inherit;
+  line-height: 1;
+  font-family: FontAwesome;
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -1308,12 +1305,6 @@ header hr:before {
   color: #2C3E50;
   background-color: #fff;
 }
-#rules a {
-  color: NULL;
-}
-#rules .loud {
-  color: NULL;
-}
 #rules section hr {
   position: relative;
 }
@@ -1322,8 +1313,12 @@ header hr:before {
   display: block;
   content: "";
   display: inline-block;
-  font: normal normal normal 14px/1 FontAwesome;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
   font-size: inherit;
+  line-height: 1;
+  font-family: FontAwesome;
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -1354,9 +1349,6 @@ header hr:before {
 #read-anywhere a {
   color: #233140;
 }
-#read-anywhere .loud {
-  color: NULL;
-}
 
 #prizes {
   color: #fff;
@@ -1364,9 +1356,6 @@ header hr:before {
 }
 #prizes a {
   color: #FFA319;
-}
-#prizes .loud {
-  color: NULL;
 }
 #prizes hr {
   position: relative;
@@ -1376,8 +1365,12 @@ header hr:before {
   display: block;
   content: "";
   display: inline-block;
-  font: normal normal normal 14px/1 FontAwesome;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
   font-size: inherit;
+  line-height: 1;
+  font-family: FontAwesome;
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -1397,9 +1390,6 @@ header hr:before {
 #recommendations a {
   color: #FFA319;
 }
-#recommendations .loud {
-  color: NULL;
-}
 #recommendations hr {
   position: relative;
 }
@@ -1408,8 +1398,12 @@ header hr:before {
   display: block;
   content: "";
   display: inline-block;
-  font: normal normal normal 14px/1 FontAwesome;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
   font-size: inherit;
+  line-height: 1;
+  font-family: FontAwesome;
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -1426,12 +1420,6 @@ header hr:before {
   color: #2C3E50;
   background-color: #fff;
 }
-#contact a {
-  color: NULL;
-}
-#contact .loud {
-  color: NULL;
-}
 #contact hr {
   position: relative;
 }
@@ -1440,8 +1428,12 @@ header hr:before {
   display: block;
   content: "";
   display: inline-block;
-  font: normal normal normal 14px/1 FontAwesome;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
   font-size: inherit;
+  line-height: 1;
+  font-family: FontAwesome;
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -1458,12 +1450,6 @@ header hr:before {
   color: #fff;
   background-color: #2C3E50;
 }
-#footer--top a {
-  color: NULL;
-}
-#footer--top .loud {
-  color: NULL;
-}
 #footer--top h2 {
   line-height: 1;
 }
@@ -1471,12 +1457,6 @@ header hr:before {
 #footer--bottom {
   color: #fff;
   background-color: #233140;
-}
-#footer--bottom a {
-  color: NULL;
-}
-#footer--bottom .loud {
-  color: NULL;
 }
 
 .button, button {
@@ -1488,7 +1468,6 @@ header hr:before {
   margin-bottom: 5px;
 }
 .button:hover, button:hover, .button:active, button:active {
-  color: NULL;
   background-color: #fff;
 }
 
@@ -1661,8 +1640,6 @@ footer #footer--bottom {
   padding: 0.625em 1.25em;
 }
 .button:hover, button:hover, .button:active, button:active {
-  color: NULL;
-  background-color: NULL;
   text-decoration: none;
 }
 

@@ -10,8 +10,12 @@
 	@include pseudo("before") {
 		//font awesome rules
         display: inline-block;
-        font: normal normal normal 14px/1 FontAwesome;
+        font-style: normal;
+        font-variant: normal;
+        font-weight: normal;
         font-size: inherit;
+        line-height: 1;
+        font-family: FontAwesome;
         text-rendering: auto;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;

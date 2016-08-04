@@ -1,4 +1,7 @@
 php/dbconnection.php
 sass/.sass-cache/*
 css/style.css.map
+css/style.css
+js/script.js
+js/contact.js
 .htaccess
