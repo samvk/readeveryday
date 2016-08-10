@@ -11,7 +11,8 @@ nav {
 header {
     //design
     color: $white;
-    background: $oceanblue url("../img/BeachBackground.png") center;
+    background-image: url("../img/BeachBackground.png"), linear-gradient(#00B4C5, #00B4C5 84%, #D4DAB3 89%, #D4DAB3);
+    background-position: center;
     
     hr {
 		@include star($white, $green);

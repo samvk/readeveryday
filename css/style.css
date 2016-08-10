@@ -1273,7 +1273,8 @@ nav a {
 
 header {
   color: #fff;
-  background: #16BDD1 url("../img/BeachBackground.png") center;
+  background-image: url("../img/BeachBackground.png"), linear-gradient(#00b4c5, #00b4c5 84%, #d4dab3 89%, #d4dab3);
+  background-position: center;
 }
 header hr {
   position: relative;
