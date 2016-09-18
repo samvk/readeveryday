@@ -71,20 +71,22 @@ nav {
         //layout
 		display: inline-block;
 		margin-bottom: 0;
-		
+
 		@include media($xs){
             //layout
 			display: block;
 		}
 		
 		a {
+            //text
+            letter-spacing: 1px;
+
             //layout
-			padding-left: 1.2em;
-			padding-right: 1.2em;
+			padding-left: 1.1em;
+			padding-right: 1.1em;
             height: 58px;
             line-height: 58px;
-			
-			
+
 			@include media($xs){
                 //text
 				font-size: 1.2em;

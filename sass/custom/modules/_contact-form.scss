@@ -32,7 +32,7 @@ textarea {
 
 //Form states
 
-.form--disabled {
+.form--is-disabled {
     //design
     background: $white;
     @include input-placeholder {
