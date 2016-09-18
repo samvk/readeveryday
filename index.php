@@ -184,7 +184,7 @@
                     </label>
                     <!-- end -->
                     <div class="form-button--wrapper">
-                       <button class="contact-form--submit" type="submit">Send</button>
+                       <button class="contact-form__submit" type="submit">Send</button>
                     </div>
                 </form>
             </div>

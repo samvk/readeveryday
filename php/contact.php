@@ -37,7 +37,7 @@ $stmt = $db->prepare("INSERT INTO contact(name, email, genre, message) VALUES (:
 $stmt->execute(array(':name' => $name, ':email' => $email, ':genre' => $genre, ':message' => $message));
 
 // Send message to email
-$to = "skauffman@crec.org";
+$to = "mail@samvk.com";
 $email_subject = "New message from $name - \"Read Every Day\"";
 $email_body = "You have received a new message from CREC's Read Every Day.\n\nHere are the details:\n\nName: $name\n\nEmail: $email_address\n\nFavorite Genre: $genre\n\nMessage:\n$message";
 $headers = "From: noreply@crec.org/readeveryday\n";
