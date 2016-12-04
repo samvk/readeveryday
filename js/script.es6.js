@@ -33,7 +33,6 @@ $(document).ready(function () {
         $(anchor).scrollTo();
     });
 
-
     /********* Navbar-related scrolling functions *********/
 
     $(window).scroll(function () {
